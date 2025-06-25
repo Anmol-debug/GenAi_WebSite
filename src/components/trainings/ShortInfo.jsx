@@ -5,12 +5,10 @@ const ShortInfo = () => {
     return (
         <div className="w-full mx-auto px-4 py-6">
             <div className="grid grid-cols-1 md:grid-cols-2  bg-white rounded-xl  min-h-[300px]">
-                {/* Sticky Text Section */}
-                <div className="sticky top-10 self-start p-6 bg-white rounded-xl space-y-6">
-                    {/* Title */}
+                <div className="sticky  top-10 self-start p-6 bg-white rounded-xl space-y-6">
                     <div className="text-xl  md:text-3xl font-bold text-gray-800 leading-snug">
-                        🚀 Unlock the Future Join <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">Shilsha Technologies</span>{' '}
-                        <span className="text-blue-700 pl-40">Generative AI Course!</span>
+                        <p className='text-4xl'>🚀 Unlock the Future</p> <br/><span className="bg-gradient-to-r via-[#4e8ad9] from-[#2f5d98] to-[#00bfff] bg-clip-text text-transparent">Join Generative AI Course!</span>{' '}
+                        <span className="text-blue-700 "></span>
                     </div>
 
 

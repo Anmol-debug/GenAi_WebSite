@@ -10,8 +10,8 @@ const GenAiBlog = () => {
                 {/* Left: Content Column */}
                 <div className="lg:col-span-2 space-y-10 text-gray-800">
                     <section className="mb-12">
-                        <h2 className="text-3xl md:text-4xl font-extrabold text-blue-700 mb-4 leading-tight">
-                            🚀 Gen AI Training
+                        <h2 className="text-3xl md:text-4xl font-extrabold underline underline-offset-3 text-blue-700 mb-4 leading-tight">
+                            Gen AI Training
                         </h2>
                         <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                             Are you ready to be at the forefront of the next technological revolution?
