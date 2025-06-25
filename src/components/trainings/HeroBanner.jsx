@@ -17,7 +17,7 @@ const HeroBanner = () => {
           <h1 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-3 bg-gradient-to-r from-cyan-200 via-white to-blue-200 bg-clip-text text-transparent drop-shadow-[0_2px_4px_rgba(255,255,255,0.3)]">
             <span>Unlock the Future with</span>
             <span className="block border-black bg-clip-text text-transparent bg-gradient-to-r from-white via-cyan-100 to-[#009ed2]">
-              Generative AI
+              Generative AI 
             </span>
           </h1>
 
