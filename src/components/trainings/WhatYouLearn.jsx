@@ -9,7 +9,7 @@ const learnTopics = [
         points: [
             'What is Generative AI & Why Now?',
             'AI vs GenAI, Rule-based vs ML',
-            'GANs, VAEs, Transformers Overview',
+            'GANs, VAEs, Transformers Overview ',
         ]
     },
     {
@@ -75,17 +75,6 @@ const WhatYouLearn = () => {
 
                 <Marquee pauseOnHover speed={40} gradient={false}>
                     <div className="flex overflow-hidden  justify-center gap-6 px-4">
-                        {/* {learnTopics.map((item, index) => (
-                            <div
-                                key={index}
-                                className="w-full sm:w-[300px] md:w-[340px] lg:w-[360px] bg-gradient-to-br from-[#0b2c48] to-[#2269a3] text-white rounded-2xl p-6 shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col justify-between"
-                            >
-                                <div className="flex  flex-col  flex-1 text-left">
-                                    <h3 className="text-lg  sm:text-xl font-semibold mb-3 text-center pl-5 pr-5 leading-snug">{item.title}</h3>
-                                    <p className="text-sm  font-semibold text-center sm:text-base leading-relaxed text-blue-50">{item.subtitle}</p>
-                                </div>
-                            </div>
-                        ))} */}
                         {learnTopics.map((item, index) => (
                             <div
                                 key={index}
@@ -96,15 +85,38 @@ const WhatYouLearn = () => {
                                     <ol className="space-y-3 text-sm font-medium">
                                         {item.points.map((point, idx) => (
                                             <li key={idx}>
-                                                <div className="flex  gap-3 items-center justify-center">
-                                                    <div className="text-white text-end  w-1/5 text-base font-bold">
-                                                        <FaDotCircle className="inline-block " />
+                                                <button
+                                                    onClick={() => {
+                                                        const el = document.getElementById("curriculum1");
+                                                        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+                                                    }}
+                                                    className="w-full"
+                                                >
+                                                    <div className="flex gap-3 items-center justify-center">
+                                                        <div className="text-white text-end w-1/5 text-base font-bold">
+                                                            <FaDotCircle className="inline-block text-white" />
+                                                        </div>
+                                                        <div className="text-start w-4/5 text-white">{point}</div>
                                                     </div>
-                                                    <div className="text-start  w-4/5">{point}</div>
-                                                </div>
+                                                </button>
                                             </li>
                                         ))}
+
+                                        {/* "more..." clickable entry */}
+                                        <li>
+                                            <button
+                                                onClick={() => {
+                                                    const el = document.getElementById("curriculum1");
+                                                    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+                                                }}
+                                                className="flex   items-end justify- w-full text-white hover:text-blue-300 transition"
+                                            >
+                                                
+                                                <div className="text-end  w-full  animate-pulse italic">More...</div>
+                                            </button>
+                                        </li>
                                     </ol>
+
                                 </div>
                             </div>
                         ))}

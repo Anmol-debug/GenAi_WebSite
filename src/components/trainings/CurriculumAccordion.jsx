@@ -128,7 +128,7 @@ const CurriculumAccordion = () => {
                                     {section.points.map((point, idx) => (
                                         <li
                                             key={idx}
-                                            className="relative pl-5 leading-relaxed before:content-[''] before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-blue-600"
+                                            className="relative pl-5 leading-relaxed before:content-[''] before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-[#4e8ad9]"
                                         >
                                             {point}
                                         </li>
