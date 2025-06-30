@@ -1,12 +1,88 @@
-import React from 'react';
 import genAiBanner from '../../assets/trainings/genAi/genAiBanner.png';
-import { FaArrowRight, FaClock, FaStar } from 'react-icons/fa';
+import { FaClock, FaMoneyBill, FaStar } from 'react-icons/fa';
 import { FaArrowRightLong, FaComputer } from 'react-icons/fa6';
-import video1 from '../../assets/trainings/genAi/video1.mp4';
-import { Navigate } from 'react-router-dom';
+
+
+const courseAmount= import.meta.env.VITE_PAYMENT_AMOUNT;
+const razorpayKeyId = import.meta.env.VITE_Key_id;
+
+const loadRazorpayScript = () => {
+  return new Promise((resolve) => {
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    script.onload = () => resolve(true);
+    script.onerror = () => resolve(false);
+    document.body.appendChild(script);
+  });
+};
+
+
+const handlePayment = async() => {
+  console.log("Payment button clicked");
+  const isLoaded = await loadRazorpayScript();
+  if (!isLoaded) {
+    alert("Razorpay SDK failed to load. Are you online?");
+    return;
+  }
+  const name = "Test User";
+  const email = "testemail@gmail.com"
+  const phone = "1234567890";
+  const course = "Generative AI Course";
+  if(!name || !email ||!phone || !course ){
+    alert("Please fill all the fields");
+    return;
+  }
+  const response=await fetch("http://localhost:8080/api/payments/create-order",{
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify({
+      name:name,
+      email:email,
+      phone:phone,
+      course:course,
+      amount: courseAmount,
+      currency: "INR",
+    })
+  })
+
+  const { order } = await response.json();
+  console.log("Order created:", order);
+  
+  const options = {
+      key: razorpayKeyId,
+      amount: order.amount,
+      currency: order.currency,
+      name: "Demo Store",
+      description: `Payment of ₹${order.amount}`,
+      order_id: order.id,
+
+      handler: async (response)=> {
+        const verifyRes = await fetch("http://localhost:8080/api/payments/verify-payments", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ...response, name, email }),
+        });
+        const verifyData = await verifyRes.json();
+        alert(verifyData.message);
+      },
+
+      prefill: {
+        name,
+        email,
+        contact: phone,
+      },
+      theme: { color: "#2563eb" },
+    };
+
+    const razor = new window.Razorpay(options);
+    razor.open();
+  };
 
 
 const HeroBanner = () => {
+
   return (
     <>
       <div className="relative shadow overflow-hidden w-full h-[300px] sm:h-[360px] md:h-[420px] lg:h-[480px] xl:h-[400px] 2xl:h-[580px] flex">
@@ -69,6 +145,14 @@ const HeroBanner = () => {
               <div className='flex gap-1'>
                 <div>Expert Led</div>
                 <div>Training</div>
+              </div>
+            </div>
+            <div 
+            onClick={handlePayment}
+            className='flex items-center justify-center gap-2 border-2 border-[#4e8ad9] rounded-md hover:scale-105 p-2 '>
+              <div><FaMoneyBill/></div>
+              <div className='flex gap-1'>
+                <div>pay 500rs</div>
               </div>
             </div>
           </div>
