@@ -3,7 +3,7 @@ import { FaMinus, FaPlus } from 'react-icons/fa';
 
 const curriculumData = [
     {
-        title: 'Foundations of GenAI & Business Relevance (Week 1-2)',
+        title: 'Foundations of GenAI & Business Relevance (Module 1)',
         points: [
             'What is Generative AI & Why Now?',
             'AI vs GenAI, Rule-based vs ML',
@@ -18,7 +18,7 @@ const curriculumData = [
         ],
     },
     {
-        title: 'Prompting, Fine-Tuning & RAG (Week 3-4)',
+        title: 'Prompting, Fine-Tuning & RAG (Module 2)',
         points: [
             'Few-shot, Zero-shot, CoT',
             'Role-based Prompts',
@@ -33,7 +33,7 @@ const curriculumData = [
         ],
     },
     {
-        title: 'Multimodal GenAI (Week 5-6)',
+        title: 'Multimodal GenAI (Module 3)',
         points: [
             'Intro to Multimodal AI',
             'Text-to-Image Generation',
@@ -48,7 +48,7 @@ const curriculumData = [
         ],
     },
     {
-        title: 'Agentic AI & RAG (Week 7-8)',
+        title: 'Agentic AI & RAG (Module 4)',
         points: [
             'What is Agentic AI?',
             'Agent Tools & Memory',
@@ -63,7 +63,7 @@ const curriculumData = [
         ],
     },
     {
-        title: 'Business Applications (Week 9-10)',
+        title: 'Business Applications (Module 5)',
         points: [
             'Automation',
             'Marketing',
@@ -78,7 +78,7 @@ const curriculumData = [
         ],
     },
     {
-        title: 'Capstone Project & Presentation (Week 11-12)',
+        title: 'Capstone Project & Presentation (Module 6)',
         points: [
             'Project Kickoff',
             'Dataset Curation',

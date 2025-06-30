@@ -109,7 +109,7 @@ const WhatYouLearn = () => {
                                                     const el = document.getElementById("curriculum1");
                                                     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
                                                 }}
-                                                className="flex   items-end justify- w-full text-white hover:text-blue-300 transition"
+                                                className="flex  cursor-pointer items-end justify- w-full text-white hover:text-blue-300 transition"
                                             >
                                                 
                                                 <div className="text-end  w-full  animate-pulse italic">More...</div>

@@ -40,8 +40,7 @@ const GenAiTraining = () => {
                     </div>
                     <div className="bg-white px-8 md:px-12 py-6 text-center text-gray-800  transition">
                         <p className="text-base sm:text-lg font-medium">
-                            We are thrilled to invite you to join our comprehensive Generative AI course, designed to equip you with the skills and knowledge to thrive in this exciting new landscape.
-                        </p>
+                            Join our Generative AI course and thrive in the future of tech.                        </p>
                     </div>
                 </div>
             </div>
