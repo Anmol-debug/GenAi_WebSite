@@ -8,7 +8,7 @@ const GenAiTraining = () => {
                 <img
                     src={genAiRobo}
                     alt="Robo Left"
-                    className="z-10 w-32 h-32 object-contain hidden lg:block lg:w-52"
+                    className="z-10 w-24 h-24 object-contain hidden lg:block lg:w-52"
                 />
                 <div className="z-10 text-center px-4 lg:px-8">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#2f5d98] mb-3">
@@ -21,12 +21,12 @@ const GenAiTraining = () => {
                 <img
                     src={genAiRobo}
                     alt="Robo Right"
-                    className="z-10 w-32 h-32 object-contain hidden lg:block lg:w-52"
+                    className="z-10 w-24 h-24 object-contain hidden lg:block lg:w-52"
                 />
             </div>
 
             {/* Info Section with top padding to allow overlap */}
-            <div className="relative pt-32 ">
+            <div className="relative pt-28 ">
                 <div className="flex border border-gray-300 rounded-xl pt-30 flex-col md:flex-row justify-center items-stretch gap-6 bg-white shadow-lg shadow-[#4e8ad9] hover:shadow-2xl transition-all duration-300 px-4 py-10 w-full max-w-7xl mx-auto">
                     <div className="bg-white border-r-none md:border-r px-8 md:px-8 py-6 text-center text-gray-800 transition">
                         <p className="text-base sm:text-lg font-medium">

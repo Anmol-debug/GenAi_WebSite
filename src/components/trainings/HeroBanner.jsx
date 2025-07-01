@@ -118,7 +118,7 @@ const HeroBanner = () => {
               href="https://docs.google.com/forms/d/e/1FAIpQLSeYXXm-GchM9X54oy0g9xpBNqoFCIePyNuLHyt4o9pOhKkYkg/viewform"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center border cursor-pointer bg-gradient-to-r from-[#2f5d98] via-[#4e8ad9] to-[#00bfff] hover:bg-[#00bfff] transition px-6 py-3 text-white rounded-md shadow text-xs sm:text-sm whitespace-nowrap"
+              className="inline-flex items-center border cursor-pointer bg-gradient-to-r from-[#2f5d98] via-[#4e8ad9] to-[#00bfff] hover:bg-[#00bfff] transition px-6 py-3 hover:shadow-sm hover:shadow-white text-white rounded-md shadow text-xs sm:text-sm whitespace-nowrap"
             >
               Enroll Now <FaArrowRightLong className="inline ml-1" />
             </a>

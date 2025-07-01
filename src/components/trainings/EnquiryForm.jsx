@@ -169,7 +169,7 @@ const CourseEnquiryForm = () => {
 
                             </div>
 
-                            <button type="submit" className="bg-[#2f5d98] cursor-pointer text-white text-xl font-bold w-full mt-4 py-2 rounded-lg hover:bg-[#204b80] transition">
+                            <button type="submit" className="bg-[#2f5d98] cursor-pointer text-white text-xl font-bold w-full mt-1 py-2 rounded-lg hover:bg-[#204b80] transition">
                                 {loading ? 'Sending...' : 'Send Enquiry'}
                             </button>
                         </form>
