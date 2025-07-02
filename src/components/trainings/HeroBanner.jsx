@@ -3,6 +3,7 @@ import { FaArrowRightLong, FaComputer } from 'react-icons/fa6';
 import genAiBanner from '../../assets/trainings/genAi/genAiBanner.png';
 
 
+const googleformuri = import.meta.env.VITE_Google_Form_URL;
 // const courseAmount= import.meta.env.VITE_PAYMENT_AMOUNT;
 // const razorpayKeyId = import.meta.env.VITE_Key_id;
 
@@ -115,7 +116,7 @@ const HeroBanner = () => {
 
           <div className="flex flex-wrap justify-center items-center gap-4 mt-2">
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeYXXm-GchM9X54oy0g9xpBNqoFCIePyNuLHyt4o9pOhKkYkg/viewform"
+              href={googleformuri}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center border cursor-pointer bg-gradient-to-r from-[#2f5d98] via-[#4e8ad9] to-[#00bfff] hover:bg-[#00bfff] transition px-6 py-3 hover:shadow-sm hover:shadow-white text-white rounded-md shadow text-xs sm:text-sm whitespace-nowrap"
