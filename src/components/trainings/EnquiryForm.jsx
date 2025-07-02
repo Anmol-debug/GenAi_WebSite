@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaBookOpen, FaRegCommentDots } from 'react-icons/fa';
 import bg5 from '../../assets/trainings/genAi/bg5.png';
@@ -11,10 +11,34 @@ const CourseEnquiryForm = () => {
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+    const [captchaQuestion, setCaptchaQuestion] = useState('');
+    const [captchaAnswer, setCaptchaAnswer] = useState('');
+    const [userCaptchaInput, setUserCaptchaInput] = useState('');
+
+    const generateCaptcha = () => {
+        const num1 = Math.floor(Math.random() * 10 + 1);
+        const num2 = Math.floor(Math.random() * 10 + 1);
+        setCaptchaQuestion(`${num1} + ${num2}`);
+        setCaptchaAnswer((num1 + num2).toString());
+    };
+
+
+    useEffect(() => {
+        generateCaptcha();
+    }, []);
+
+
+
     const sendEmail = (e) => {
         e.preventDefault();
         setLoading(true);
-
+        if (userCaptchaInput !== captchaAnswer) {
+            alert("Incorrect CAPTCHA. Please try again.");
+            setUserCaptchaInput('');
+            generateCaptcha(); // Regenerate new question
+            setLoading(false);
+            return;
+        }
         emailjs.sendForm(
             serviceId,
             templateId,
@@ -119,12 +143,33 @@ const CourseEnquiryForm = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-full md:col-span-2 bg-pink-200 text-center py-4 rounded font-semibold text-gray-700">
-                                    CAPTCHA
+                                <div className="w-full md:col-span-2">
+                                    <label className="text-sm font-medium mb-1">CAPTCHA *</label>
+                                    <div className="flex items-center gap-3">
+                                        <div className="bg-blue-100 px-4 py-2 w-30 text-center rounded text-lg font-semibold text-gray-800">
+                                            {captchaQuestion}
+                                        </div>
+                                        <input
+                                            type="text"
+                                            value={userCaptchaInput}
+                                            onChange={(e) => setUserCaptchaInput(e.target.value)}
+                                            placeholder="Answer"
+                                            required
+                                            className="w-full px-3 py-2 border border-gray-300 rounded-lg outline-none"
+                                        />
+                                        <button
+                                            type="button"
+                                            onClick={generateCaptcha}
+                                            className="text-sm bg-blue-100 p-2 rounded-lg cursor-pointer"
+                                        >
+                                            Refresh
+                                        </button>
+                                    </div>
                                 </div>
+
                             </div>
 
-                            <button type="submit" className="bg-[#2f5d98] text-white text-xl font-bold w-full mt-4 py-2 rounded-lg hover:bg-[#204b80] transition">
+                            <button type="submit" className="bg-[#2f5d98] cursor-pointer text-white text-xl font-bold w-full mt-1 py-2 rounded-lg hover:bg-[#204b80] transition">
                                 {loading ? 'Sending...' : 'Send Enquiry'}
                             </button>
                         </form>

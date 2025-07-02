@@ -76,7 +76,7 @@ const WhyChooseShilsha = () => {
                         {shilshaFeatures2.map((item, index) => (
                             <div
                                 key={index}
-                                className="bg-transparent border w-full max-w-md border-gray-300  shadow-lg shadow-[#4e8ad9] hover:shadow-2xl transition-all duration-300 flex flex-col items-center justify-center rounded-lg p-6 text-left"
+                                className="bg-transparent border w-full max-w-[400px] border-gray-300  shadow-lg shadow-[#4e8ad9] hover:shadow-2xl transition-all duration-300 flex flex-col items-center justify-center rounded-lg p-6 text-left"
                             >
                                 <div className="flex flex-col items-center text-center flex-1">
                                     {item.icon}
