@@ -30,17 +30,30 @@ const GenAiTraining = () => {
                 <div className="flex border border-gray-300 rounded-xl pt-30 flex-col md:flex-row justify-center items-stretch gap-6 bg-white shadow-lg shadow-[#4e8ad9] hover:shadow-2xl transition-all duration-300 px-4 py-10 w-full max-w-7xl mx-auto">
                     <div className="bg-white border-r-none md:border-r px-8 md:px-8 py-6 text-center text-gray-800 transition">
                         <p className="text-base sm:text-lg font-medium">
-                            Are you ready to be at the forefront of the next technological revolution?
+                            Are you ready to be at the
+                            forefront of the next
+                            technological revolution and
+                            lead with Generative Al
+                            expertise?                        
                         </p>
                     </div>
-                    <div className="bg-white border-r-none md:border-r px-8 md:px-12 py-6 text-center text-gray-800  transition">
+                    <div className="bg-white border-r-none md:border-r px-8 md:px-8 py-6 text-center text-gray-800  transition">
                         <p className="text-base sm:text-lg font-medium">
-                            Generative AI is rapidly transforming industries, creating unprecedented opportunities for innovation and growth.
+                            Generative AI is rapidly
+                            transforming industries,
+                            creating unprecedented
+                            opportunities for innovation
+                            and growth                        
                         </p>
                     </div>
-                    <div className="bg-white px-8 md:px-12 py-6 text-center text-gray-800  transition">
+                    <div className="bg-white px-8 md:px-8 py-6 text-center text-gray-800  transition">
                         <p className="text-base sm:text-lg font-medium">
-                            Join our Generative AI course and thrive in the future of tech.                        </p>
+                            Join our Generative AI
+                            course and build future-
+                            ready skills to thrive in
+                            tomorrow's technology-
+                            driven world.
+                        </p>
                     </div>
                 </div>
             </div>
