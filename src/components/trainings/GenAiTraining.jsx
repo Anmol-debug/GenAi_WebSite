@@ -45,15 +45,15 @@ const GenAiTraining = () => {
                             opportunities for innovation
                             and growth                        
                         </p>
-                    </div>
-                    <div className="bg-white px-8 md:px-8 py-6 text-center text-gray-800  transition">
-                        <p className="text-base sm:text-lg font-medium">
-                            Join our Generative AI
-                            course and build future-
+             course and build future-
                             ready skills to thrive in
                             tomorrow's technology-
                             driven world.
-                        </p>
+                                         </div>
+                    <div className="bg-white px-8 md:px-8 py-6 text-center text-gray-800  transition">
+                        <p className="text-base sm:text-lg font-medium">
+                            Join our Generative AI
+                  </p>
                     </div>
                 </div>
             </div>
