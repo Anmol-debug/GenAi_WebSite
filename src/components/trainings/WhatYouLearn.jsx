@@ -5,7 +5,7 @@ import { FaDotCircle } from 'react-icons/fa'
 
 const learnTopics = [
     {
-        title: 'Foundations of GenAI & Business',
+        title: 'Foundations of GenAI & Business Relevance',
         points: [
             'What is Generative AI & Why Now?',
             'AI vs GenAI, Rule-based vs ML',
@@ -13,7 +13,7 @@ const learnTopics = [
         ]
     },
     {
-        title: 'Prompting, Fine-Tuning & RAG',
+        title: 'Prompting and RAG Introduction',
         points: [
             'Few-shot, Zero-shot, CoT',
             'Role-based Prompts',
@@ -29,7 +29,7 @@ const learnTopics = [
         ]
     },
     {
-        title: 'Agentic AI & RAG',
+        title: 'Agentic AI & RAG ',
         points: [
             'What is Agentic AI?',
             'Agent Tools & Memory',
@@ -37,7 +37,7 @@ const learnTopics = [
         ]
     },
     {
-        title: 'Business Applications',
+        title: 'Business Applications ',
         points: [
             'Automation',
             'Marketing',
