@@ -15,9 +15,9 @@ const learnTopics = [
     {
         title: 'Prompting and RAG Introduction',
         points: [
-            'Few-shot, Zero-shot, CoT',
+            'Few-shot, Zero-shot',
             'Role-based Prompts',
-            'Prompt Injection & Safety',
+            'Temperature Setting',
         ]
     },
     {
