@@ -110,7 +110,7 @@ const HeroBanner = () => {
           </h1>
 
           <p className="text-xs sm:text-sm md:text-lg lg:text-xl mb-4 w-full max-w-5xl font-medium text-white px-24">
-            Join Shilsha Technologies' comprehensive 60-hour online course and master the
+            Join Shilsha Technologies' comprehensive 60 hours online course and master the
             technologies that are revolutionizing industries worldwide.
           </p>
 
