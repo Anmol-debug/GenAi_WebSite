@@ -20,7 +20,7 @@ const FAQs = ({faqs}) => {
   }, [openIndex]);
 
   return (
-    <section className="bg-gray-50 py-16 md:py-20">
+    <section className="bg-gray-50 py-16 md:py-10">
       <div className="max-w-5xl mx-auto px-6 md:px-8">
         <h2 className="text-black text-4xl font-bold text-center mb-12">
           Frequently Asked Questions
